@@ -89,7 +89,7 @@ public partial class SettingsCheckBox : UserControl
             {
                 ToolTipIcon.Warning => Properties.Resources.Warning,
                 ToolTipIcon.Information => Properties.Resources.information,
-                _ => throw new NotImplementedException(),
+                _ => Properties.Resources.information, // Default to information icon for invalid values
             };
         }
     }

@@ -23,12 +23,13 @@ public partial class RemotesComboboxControl : GitModuleControl
         get { return _allowMultiselect; }
         set
         {
+            if (value)
+            {
+                throw new NotSupportedException("Multi-select feature is not yet implemented.");
+            }
+
             _allowMultiselect = value;
             buttonSelectMultipleRemotes.Visible = _allowMultiselect;
-            if (_allowMultiselect)
-            {
-                throw new NotImplementedException();
-            }
         }
     }
 
