@@ -20,7 +20,7 @@ public partial class RemotesComboboxControl : GitModuleControl
     private bool _allowMultiselect;
     public bool AllowMultiselect
     {
-        get { return _allowMultiselect; }
+        get => _allowMultiselect;
         set
         {
             if (value)
@@ -28,8 +28,8 @@ public partial class RemotesComboboxControl : GitModuleControl
                 throw new NotSupportedException("Multi-select feature is not yet implemented.");
             }
 
-            _allowMultiselect = value;
-            buttonSelectMultipleRemotes.Visible = _allowMultiselect;
+            _allowMultiselect = false;
+            buttonSelectMultipleRemotes.Visible = false;
         }
     }
 
